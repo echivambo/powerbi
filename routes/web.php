@@ -14,3 +14,19 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+//Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/home', 'HomeController@index')->name('home');
+    Route::resource('/users', 'UserController');
+    Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+    Route::resource('/users', 'UserController');
+    Route::get('/changePassword','HomeController@showChangePasswordForm');
+    Route::post('/changePassword','HomeController@changePassword')->name('changePassword');
+
+
+});
