@@ -7,6 +7,8 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Register</div>
 
+                    @include('admin.mensagens.msg')
+
                     <div class="panel-body">
                         <form class="form-horizontal" method="POST" action="{{ route('register') }}">
                             {{ csrf_field() }}

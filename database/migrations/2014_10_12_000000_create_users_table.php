@@ -19,6 +19,8 @@ class CreateUsersTable extends Migration
             $table->string('grupo',20);
             $table->string('email',30)->unique();
             $table->string('password');
+            $table->integer('provincia_id')->references('id')->on('provice_of_mozambique');
+            $table->integer('distrito_id')->references('id')->on('districts_of_mozambique');
             $table->rememberToken();
             $table->timestamps();
         });

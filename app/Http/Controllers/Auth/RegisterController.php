@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Mail\SendEmail;
+use App\Mail\WelcomeMail;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
@@ -21,7 +24,7 @@ class RegisterController extends Controller
     |
     */
 
-    use RegistersUsers;
+   // use RegistersUsers;
 
     /**
      * Where to redirect users after registration.
@@ -63,6 +66,10 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $posts =$data;
+
+        Mail::to($posts['email'])->send(new SendEmail($posts));
+
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],

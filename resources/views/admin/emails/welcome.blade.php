@@ -55,7 +55,7 @@
 
         /* An article */
         .sectionArticleTitle, .sectionArticleContent {text-align: center;}
-        .sectionArticleTitle {font-size: 18px; padding: 10px 0px 5px; 0px;}
+        .sectionArticleTitle {font-size: 18px; padding: 10px 0px 5px 0px;}
         .sectionArticleContent {font-size: 13px; line-height: 18px;}
         .sectionArticleImage {text-align: center;}
         .sectionArticleImage img {padding: 0px 0px 0px 0px; -ms-interpolation-mode: bicubic;}
@@ -131,7 +131,7 @@
                                     <tbody>
                                     <tr>
                                         <td align="left" valign="middle" width="50%"><span style="margin:0;color:#4c4c4c;white-space:normal;display:inline-block;text-decoration:none;font-size:12px;line-height:20px">PSI | Moz</span></td>
-                                        <td valign="middle" width="50%" align="right" style="padding:0 0 0 10px"><span style="margin:0;color:#4c4c4c;white-space:normal;display:inline-block;text-decoration:none;font-size:12px;line-height:20px">2018 © Copyright DQA</span></td>
+                                        <td valign="middle" width="50%" align="right" style="padding:0 0 0 10px"><span style="margin:0;color:#4c4c4c;white-space:normal;display:inline-block;text-decoration:none;font-size:12px;line-height:20px">2018 © Copyright Power BI</span></td>
                                         <td width="1">&nbsp;</td>
                                     </tr>
                                     </tbody>
@@ -152,7 +152,7 @@
                                                             <tbody>
                                                             <tr>
                                                                 <td align="center" width="100%">
-                                                                    <h1 style="padding:0;margin:0;color:#ffffff;font-weight:500;font-size:20px;line-height:24px">PSI | MOZ DQA Registro de Usuarios</h1>
+                                                                    <h1 style="padding:0;margin:0;color:#ffffff;font-weight:500;font-size:20px;line-height:24px">PSI | MOZ Power BI Registro de Usuarios</h1>
                                                                 </td>
                                                             </tr>
                                                             </tbody>
@@ -166,8 +166,8 @@
                                                             <tr>
                                                                 <td align="center" width="100%" style="padding: 0 15px;text-align: justify;color: rgb(76, 76, 76);font-size: 12px;line-height: 18px;">
                                                                     <h3 style="font-weight: 600; padding: 0px; margin: 0px; font-size: 16px; line-height: 24px; text-align: center;" class="title-color">Hi {{$posts['name']}},</h3>
-                                                                    <p style="margin: 20px 0 30px 0;font-size: 13px;text-align: center;">Recentimente foste adicionado para ter acesso ao sistema DQA com a seguite senha:<a style="font-style: italic ;font-size: 15px;">{{$posts['password']}}</a> lembri-se de alterar a senha, para tal <br/><b>Faça o login e Clica na seta no canto superior direito e deseguida Home </b>!</p>
-                                                                    <div style="font-weight: 200; text-align: center; margin: 25px;"><a style="padding:0.6em 1em;border-radius:600px;color:#ffffff;font-size:14px;text-decoration:none;font-weight:bold" class="button-color" href="https://www.psi.evidevi.com/DQA/public/changePassword">Login</a></div>
+                                                                    <p style="margin: 20px 0 30px 0;font-size: 13px;text-align: center;">Recentimente foste adicionado para ter acesso ao sistema Power BI com a seguite senha:<a style="font-style: italic ;font-size: 15px;">{{$posts['password']}}</a> lembri-se de alterar a senha, para tal <br/><b>Faça o login e Clica na seta no canto superior direito e deseguida Home </b>!</p>
+                                                                    <div style="font-weight: 200; text-align: center; margin: 25px;"><a style="padding:0.6em 1em;border-radius:600px;color:#ffffff;font-size:14px;text-decoration:none;font-weight:bold" class="button-color" href="https://www.psi.evidevi.com/powerbi/public/changePassword">Login</a></div>
                                                                 </td>
                                                             </tr>
                                                             </tbody>

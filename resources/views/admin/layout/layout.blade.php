@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/img/logo.png') }}">
-    <title>PSI Moz | DQA</title>
+    <title>PSI Moz | Ordem de Encomenda</title>
 
 
     <link href="{{ asset('admin/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -27,6 +27,8 @@
     <![endif]-->
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
 
     <!--ACTUALIZACAO DO BOOTSTRAP-->
@@ -59,7 +61,7 @@
 
 
         footer {
-            padding: 15px;
+            padding: 10px;
             color: #fff;
             text-align: center;
             background-color: rgba(245,127,23,.8);
@@ -147,10 +149,78 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="{{route('home')}}" >PSI | Moz</a>
+                <a class="navbar-brand" href="{{route('home')}}" >PSI Moz</a>
 
 
 
+            <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    @if(Auth::user()->grupo=='2')
+                        <li class="dropdown">
+                            <a class="dropdown-toggle " data-toggle="dropdown">Admin Menu</a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Usuários</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="{{route('users.create')}}">Add Users <i class="fa fa-users fa-lg pull-right"></i></a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="divider"></li>
+
+                                <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Extrair BD</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Encomendas</a></li>
+                                        <li><a href="#">Clientes</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="divider"></li>
+
+                                <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Clientes</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Registar Cliente</a></li>
+                                        <li><a href="#">Listar Clientes</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="divider"></li>
+
+                                <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Estabelecimentos</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Registar Estabelecimento</a></li>
+                                        <li><a href="#">Listar Estabelecimentos</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="divider"></li>
+
+                                <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Produtos</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Registar Produto</a></li>
+                                        <li><a href="#">Listar Produtos</a></li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </li>
+                    @endif
+                </ul>
+
+                <ul class="nav navbar-nav pull-right">
+                    <li class="dropdown pull-right">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user-circle-o" aria-hidden="true"></i></use></svg> {{ Auth::user()->name }} <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li id="updateU"><a href="{{ route('changePassword') }}"><i class="fa fa-key" aria-hidden="true"></i> Mudar Password</a>
+                            </li>
+                            <li><a href="{{ route('logout') }}"><i class="fa fa-sign-out" aria-hidden="true"></i> Sair</a>
+                            </li>
+                        </ul>
+
+                    </li>
+
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
             </div>
 
         </nav>
@@ -169,7 +239,7 @@
             <div class="row bort">
 
                 <div class="copyright">
-                    2017 © Copyright DQA | PSI Moz. <a href="http://evidevi.com/" target="_blank">Powered by: evidevi.com</a>
+                    2018 © Copyright PSI Moz. <a href="http://evidevi.com/" target="_blank">Powered by: evidevi.com</a>
                 </div>
 
             </div>

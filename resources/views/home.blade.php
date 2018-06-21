@@ -1,5 +1,4 @@
-@extends('layouts.app')
-
+@extends('admin.layout.layout')
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -14,10 +13,13 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    You are logged in!<a href="{{route('get-encomendas')}}"> link</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<!--
+<script>window.location.href = 'cws';</script>
+-->
 @endsection
